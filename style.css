@@ -1,0 +1,58 @@
+.divLogo {
+    text-align: center;
+}
+
+.imgLogo {
+    width: 150px;
+}
+
+.divInformation {
+    opacity: 0.7;
+}
+
+.divLight {
+    opacity: 0.7;
+}
+
+.divScreen {
+    opacity: 0.7;
+}
+
+.txtConnexion {
+    color: rgb(255, 0, 0);
+}
+
+.btnConnexion {
+    cursor: pointer;
+}
+
+.btnDisconnect {
+    cursor: not-allowed;
+}
+
+.btnRefresh {
+    cursor: not-allowed;
+    border-style: hidden;
+    background-color: white;
+}
+
+.btnLight1 {
+    cursor: not-allowed;
+}
+
+.btnLight2 {
+    cursor: not-allowed;
+}
+
+.btnLight3 {
+    cursor: not-allowed;
+}
+
+.screen {
+    cursor: not-allowed;
+    resize: none;
+}
+
+.btnSend {
+    cursor: not-allowed;
+}

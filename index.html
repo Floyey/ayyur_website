@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'> <!-- Ajustement de la page selon le support -->
+    <link rel='stylesheet' href='style.css'> <!-- Association du fichier style.css -->
+    <title>Solar Home System</title> <!-- Nom de l'onglet -->
+</head>
+
+<body>
+    <!-- Logo du site Ayyur -->
+    <div class="divLogo">
+        <img class="imgLogo" src="logo_ayyur.png" alt="">
+    </div>
+    <hr>
+
+    <!-- Partie connexion -->
+    <div id='EspaceConnexion' class='EspaceConnexion'>
+        <h2>Se connecter à un module</h2>
+        <!-- Liste des modules -->
+        <select name='selectModule' id='selectModule'>
+            <option value='' selected>--Chosissez un module--</option>
+            <option value='module1'>Module n°1</option>
+            <option value='module2'>Module n°2</option>
+            <option value='module3'>Module n°3</option>
+            <option value='module4'>Module n°4</option>
+            <option value='module5'>Module n°5</option>
+        </select>
+        <button onclick='Connect()' class='btnConnexion' id='btnConnexion'>Connexion</button> <!-- Bouton de connexion -->
+        <button disabled onclick='Disconnect()' class="btnDisconnect" id="btnDisconnect">Déconnexion</button>
+    </div>
+
+    <hr>
+
+    <p id='txtConnexion' class='txtConnexion'>⚠️ Sélectionnez un module pour vous connecter ⚠️</p> <!-- Indication de l'état de la connexion -->
+
+    <hr>
+
+    <!-- Partie des informations du module connecté -->
+    <h4>Informations principales du module <button disabled onclick='Refresh()' id='btnRefresh' class='btnRefresh'>🔄</button></h4>
+    <div id='divInformation' class='divInformation'>
+        <p id='txtName'>Nom du module : Connectez vous à un module</p>   <!-- Nom du module -->
+        <p id='txtIP'>IP du module : Connectez vous à un module</p>  <!-- IP du module -->
+        <p id='txtTime'>Date et heure locale : Connectez vous à un module</p> <!-- Heure locale du module -->
+        <p id='txtBattery'>Pourcentage de la batterie : Connectez vous à un module</p> <!-- Pourcentage de la batterie du module -->
+    </div>
+
+    <hr>
+    <!-- Compartiment de la lumière du module -->
+    <h4>État des lumières des lumières du module :</h4>
+    <div id='divLight' class='divLight'>
+            <!-- Compartiment de la première lumière -->
+        <p>État de la lumière n°1 :</p>
+        <p id='txtLight1' class='light1'>Connectez vous à un module</p>
+            <!-- Compartiment de la seconde lumière -->
+        <button disabled onclick='Light1()' id='btnLight1' class='btnLight1'>Connectez vous à un module</button>
+        <p>État de la lumière n°2 :</p>
+        <p id='txtLight2' class='light2'>Connectez vous à un module</p>
+        <button disabled onclick='Light2()' id='btnLight2' class='btnLight2'>Connectez vous à un module</button>
+            <!-- Compartiment de la troisième lumière -->
+        <p>État de la lumière n°3 :</p>
+        <p id='txtLight3' class='light3'>Connectez vous à un module</p>
+        <button disabled onclick='Light3()' id='btnLight3' class='btnLight3'>Connectez vous à un module</button>
+    </div>
+
+        <hr>
+
+        <!-- Compartiment de l'affiche de l'écran -->
+        <h4>Affichage de l'écran</h4>
+        <div id='divScreen' class='divScreen'>
+            <p>Voilà ce qu'il y a d'écrit actuellement :</p>
+            <p id="txtActualScreen" class="txtActualScreen"></p>
+            <label for='screen'>Que voulez-vous écrire sur l'écran ?</label>
+            <br>
+            <textarea onclick="txtScreen()" disabled class='screen' name='screen' id='txtScreen' cols='33' rows='3' maxlength='20'>Écrivez ici...</textarea>
+            <button onclick="Send()" disabled id='btnSend' class='btnSend'>Envoyer</button>
+        </div>
+
+    <script src='script.js'></script> <!-- Association du fichier script.js -->
+</body>
+</html>
